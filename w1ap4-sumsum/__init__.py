@@ -14,5 +14,4 @@ def compiles():
 @check50.check(compiles)
 def testn0():
     """rejects n<1"""
-    #check50.run("./w1ap4-sumsum").stdin("0").stdin("0").reject()
-    check50.run("./w1ap4-sumsum").stdin("0").reject()
+    check50.run("./w1ap4-sumsum").stdin("0").stdin("0").reject()

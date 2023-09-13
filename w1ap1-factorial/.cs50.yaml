@@ -1,6 +1,7 @@
 check50:
-  checks:
-    hello world:
-      - run: python3 hello.py
-        stdout: Hello, world!
-        exit: 0
+  files: &check50_files
+    - !exclude "*"
+    - !require w1ap1-factorial.c
+
+submit50:
+  files: *check50_files

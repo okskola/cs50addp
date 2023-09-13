@@ -14,19 +14,19 @@ def compiles():
 @check50.check(compiles)
 def f5():
     """checks that 5! equals 120"""
-    check50.run("./w1ap1-factorial").stdin("5").stdout("125").exit()
+    check50.run("./w1ap1-factorial").stdin("5").stdout("Factorial of 5 is 125").exit()
 
 @check50.check(compiles)
 def f10():
     """checks that 10! equals 3628800"""
-    check50.run("./w1ap1-factorial").stdin("10").stdout("3628800").exit()
+    check50.run("./w1ap1-factorial").stdin("10").stdout("Factorial of 10 is 3628800").exit()
 
 @check50.check(compiles)
 def f1():
     """checks that 1! equals 1"""
-    check50.run("./w1ap1-factorial").stdin("1").stdout("1").exit()
+    check50.run("./w1ap1-factorial").stdin("1").stdout("Factorial of 1 is 1").exit()
 
 @check50.check(compiles)
 def f0():
     """checks that 0! equals 1"""
-    check50.run("./w1ap1-factorial").stdin("0").stdout("1").exit()
+    check50.run("./w1ap1-factorial").stdin("0").stdout("Factorial of 0 is 1").exit()

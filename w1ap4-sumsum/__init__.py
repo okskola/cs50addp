@@ -12,12 +12,12 @@ def compiles():
     check50.c.compile("w1ap4-sumsum.c", lcs50=True)
 
 @check50.check(compiles)
-def test0():
+def testn0():
     """rejects n<1"""
     check50.run("./w1ap4-sumsum").stdin("0").reject()
 
 @check50.check(compiles)
-def test0():
+def testt0():
     """rejects t<1"""
     check50.run("./w1ap4-sumsum").stdin("1").stdin("0").reject()
 

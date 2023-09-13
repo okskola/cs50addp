@@ -12,6 +12,26 @@ def compiles():
     check50.c.compile("w1ap3-reverse.c", lcs50=True)
 
 @check50.check(compiles)
-def s135():
-    """checks that sum of first and last digits of 135 equals 6"""
-    check50.run("./w1ap3-reverse").stdin("135").stdout("Sum of first and last digits of n is 6").exit()
+def r12345():
+    """checks that reverse of 12345 is 54321"""
+    check50.run("./w1ap3-reverse").stdin("12345").stdout("Reversed n is 54321").exit()
+
+@check50.check(compiles)
+def r7():
+    """checks that reverse of 7 is 7"""
+    check50.run("./w1ap3-reverse").stdin("7").stdout("Reversed n is 7").exit()
+
+@check50.check(compiles)
+def r0():
+    """checks that reverse of 0 is 0"""
+    check50.run("./w1ap3-reverse").stdin("0").stdout("Reversed n is 0").exit()
+
+@check50.check(compiles)
+def r123000():
+    """checks that reverse of 123000 is 321"""
+    check50.run("./w1ap3-reverse").stdin("123000").stdout("Reversed n is 321").exit()
+
+@check50.check(compiles)
+def rneg12345():
+    """checks that reverse of -12345 is -12345"""
+    check50.run("./w1ap3-reverse").stdin("-12345").stdout("Reversed n is -12345").exit()

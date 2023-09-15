@@ -49,7 +49,7 @@ def short2palindrome():
 @check50.check(compiles)
 def palindromewithspace():
     """check if palindrome with space gives output of yes"""
-    check50.run("./w2ap1-palindrome \"Yawn a more Roman way\"").stdout("Yes").exit()
+    check50.run("./w2ap1-palindrome \"yawn a more roman way\"").stdout("Yes").exit()
 
 @check50.check(compiles)
 def nopalindrome():

@@ -41,3 +41,8 @@ def test6():
     """checks for different case, without spaces, unsorted"""
     check50.run("./w2ap2-stringsort").stdin("aBcd").stdin("AbAd").stdout("AbAd\naBcd").exit()
 
+@check50.check(compiles)
+def test7():
+    """checks for different case, with spaces, unsorted"""
+    check50.run("./w2ap2-stringsort").stdin("a Bc d").stdin("aB            cd").stdout("aB            cd\na Bc d").exit()
+

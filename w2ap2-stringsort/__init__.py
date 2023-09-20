@@ -44,5 +44,5 @@ def test6():
 @check50.check(compiles)
 def test7():
     """checks for different case, with spaces, unsorted"""
-    check50.run("./w2ap2-stringsort").stdin("a Bc d").stdin("aB            cd").stdout("aB            cd\na Bc d").exit()
+    check50.run("./w2ap2-stringsort").stdin("a Bc d").stdin("aA            cd").stdout("aA            cd\na Bc d").exit()
 

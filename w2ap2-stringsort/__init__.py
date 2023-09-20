@@ -31,3 +31,13 @@ def test4():
     """checks for lowercase with spaces, equal"""
     check50.run("./w2ap2-stringsort").stdin("the test").stdin("t h et e s t").stdout("the test\nt h et e s t").exit()
 
+@check50.check(compiles)
+def test5():
+    """checks for different case, without spaces, sorted"""
+    check50.run("./w2ap2-stringsort").stdin("aBc").stdin("BcD").stdout("aBc\nBcD").exit()
+
+@check50.check(compiles)
+def test6():
+    """checks for different case, without spaces, unsorted"""
+    check50.run("./w2ap2-stringsort").stdin("aBcd").stdin("AbAd").stdout("AbAd\naBcd").exit()
+

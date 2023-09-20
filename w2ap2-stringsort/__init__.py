@@ -23,8 +23,8 @@ def test2():
 
 @check50.check(compiles)
 def test3():
-    """checks for lowercase without spaces, equal"""
-    check50.run("./w2ap2-stringsort").stdin("57931").stdin("57931").stdout("abc\nbcd").exit()
+    """checks for equal"""
+    check50.run("./w2ap2-stringsort").stdin("57931").stdin("57931").stdout("57931\n57931").exit()
 
 @check50.check(compiles)
 def test4():

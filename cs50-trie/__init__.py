@@ -16,8 +16,9 @@ def noargs():
     """check number of command line arguments (no args)"""
     check50.run("./trie").exit(1)
 
+@check50.check(compiles)
 def nofile():
-    """check number of command line arguments (no args)"""
+    """checks for non-existing file"""
     check50.run("./trie test.txt").exit(1)
 
 @check50.check(compiles)

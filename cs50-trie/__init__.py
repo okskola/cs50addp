@@ -11,13 +11,14 @@ def compiles():
     """trie.c compiles"""
     check50.c.compile("trie.c", lcs50=True)
 
+@check50.check(compiles)
 def noargs():
-    """check number of command line arguments"""
+    """check number of command line arguments (no args)"""
     check50.run("./trie").exit(1)
 
 @check50.check(compiles)
 def toomanyargs():
-    """check number of command line arguments"""
+    """check number of command line arguments (too many args)"""
     check50.run("./trie aaa.txt bbb.txt").exit(1)
 
 # @check50.check(compiles)

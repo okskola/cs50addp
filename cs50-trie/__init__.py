@@ -41,6 +41,7 @@ def test4():
      """checks for mOLLy (ignores case)"""
      check50.run("./trie dog_names.txt").stdin("mOLLy").stdout("Found!").exit()
 
+# names from https://www.ssa.gov/oact/babynames/decades/century.html
 @check50.check(compiles)
 def test5():
      """checks for other names (Found)"""

@@ -17,20 +17,24 @@ def noargs():
     check50.run("./trie").exit(1)
 
 @check50.check(compiles)
-def nofile():
-    """checks for non-existing file"""
-    check50.run("./trie test.txt").exit(1)
-
-@check50.check(compiles)
 def toomanyargs():
     """check number of command line arguments (too many args)"""
     check50.run("./trie aaa.txt bbb.txt").exit(1)
 
 @check50.check(compiles)
+def nofile():
+    """checks for non-existing file"""
+    check50.run("./trie test.txt").exit(1)
+
+@check50.check(compiles)
+def isfile():
+    """checks for existing file"""
+    check50.run("./trie dog_names.txt").exit(1)
+
+@check50.check(compiles)
 def test1():
     """checks for Molly"""
     check50.run("./trie dog_names.txt").stdin("Molly").stdout("Found!").exit()
-    check50.run("./w1ap1-factorial").stdin("5").stdout("Factorial of 5 is 120").exit()
 
 @check50.check(compiles)
 def test2():

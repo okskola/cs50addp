@@ -5,6 +5,7 @@ import check50.c
 def exists():
     """trie.c exists"""
     check50.exists("trie.c")
+    check50.include("names")
 
 @check50.check(exists)
 def compiles():
@@ -25,11 +26,6 @@ def toomanyargs():
 def nofile():
     """checks for non-existing file"""
     check50.run("./trie names/test.txt").exit(1)
-
-@check50.check(compiles)
-def isfile():
-    """checks for existing file"""
-    check50.run("./trie names/dog_names.txt").exit(1)
 
 @check50.check(compiles)
 def test1():

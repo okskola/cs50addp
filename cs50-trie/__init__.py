@@ -16,6 +16,10 @@ def noargs():
     """check number of command line arguments (no args)"""
     check50.run("./trie").exit(1)
 
+def nofile():
+    """check number of command line arguments (no args)"""
+    check50.run("./trie test.txt").exit(1)
+
 @check50.check(compiles)
 def toomanyargs():
     """check number of command line arguments (too many args)"""
@@ -23,32 +27,33 @@ def toomanyargs():
 
 @check50.check(compiles)
 def test1():
-     """checks for Molly"""
-     check50.run("./trie dog_names.txt").stdin("Molly").stdout("Found!").exit()
+    """checks for Molly"""
+    check50.run("./trie dog_names.txt").stdin("Molly").stdout("Found!").exit()
+    check50.run("./w1ap1-factorial").stdin("5").stdout("Factorial of 5 is 120").exit()
 
 @check50.check(compiles)
 def test2():
-     """checks for Lucy"""
-     check50.run("./trie dog_names.txt").stdin("Lucy").stdout("Found!").exit()
+    """checks for Lucy"""
+    check50.run("./trie dog_names.txt").stdin("Lucy").stdout("Found!").exit()
 
 @check50.check(compiles)
 def test3():
-     """checks for Prudence"""
-     check50.run("./trie dog_names.txt").stdin("Prudence").stdout("Not Found.").exit()
+    """checks for Prudence"""
+    check50.run("./trie dog_names.txt").stdin("Prudence").stdout("Not Found.").exit()
 
 @check50.check(compiles)
 def test4():
-     """checks for mOLLy (ignores case)"""
-     check50.run("./trie dog_names.txt").stdin("mOLLy").stdout("Found!").exit()
+    """checks for mOLLy (ignores case)"""
+    check50.run("./trie dog_names.txt").stdin("mOLLy").stdout("Found!").exit()
 
 # names from https://www.ssa.gov/oact/babynames/decades/century.html
 @check50.check(compiles)
 def test5():
-     """checks for other names (Found)"""
-     check50.run("./trie other_names.txt").stdin("JENNIFER").stdout("Found!").exit()
+    """checks for other names (Found)"""
+    check50.run("./trie other_names.txt").stdin("JENNIFER").stdout("Found!").exit()
 
 @check50.check(compiles)
 def test6():
-     """checks for other names (Not Found)"""
-     check50.run("./trie other_names.txt").stdin("Jenni").stdout("Not Found.").exit()
+    """checks for other names (Not Found)"""
+    check50.run("./trie other_names.txt").stdin("Jenni").stdout("Not Found.").exit()
 

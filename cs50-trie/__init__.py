@@ -22,32 +22,32 @@ def toomanyargs():
     check50.run("./trie aaa.txt bbb.txt").exit(1)
 
 @check50.check(compiles)
- def test1():
+def test1():
      """checks for Molly"""
      check50.run("./trie dog_names.txt").stdin("Molly").stdout("Found!").exit()
 
 @check50.check(compiles)
- def test2():
+def test2():
      """checks for Lucy"""
      check50.run("./trie dog_names.txt").stdin("Lucy").stdout("Found!").exit()
 
 @check50.check(compiles)
- def test3():
+def test3():
      """checks for Prudence"""
      check50.run("./trie dog_names.txt").stdin("Prudence").stdout("Not Found.").exit()
 
 @check50.check(compiles)
- def test4():
+def test4():
      """checks for mOLLy (ignores case)"""
      check50.run("./trie dog_names.txt").stdin("mOLLy").stdout("Found!").exit()
 
 @check50.check(compiles)
- def test5():
+def test5():
      """checks for other names (Found)"""
      check50.run("./trie other_names.txt").stdin("JENNIFER").stdout("Found!").exit()
 
 @check50.check(compiles)
- def test6():
+def test6():
      """checks for other names (Not Found)"""
      check50.run("./trie other_names.txt").stdin("Jenni").stdout("Not Found.").exit()
 

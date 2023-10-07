@@ -24,41 +24,41 @@ def toomanyargs():
 @check50.check(compiles)
 def nofile():
     """checks for non-existing file"""
-    check50.run("./trie test.txt").exit(1)
+    check50.run("./trie names/test.txt").exit(1)
 
 @check50.check(compiles)
 def isfile():
     """checks for existing file"""
-    check50.run("./trie dog_names.txt").exit(1)
+    check50.run("./trie names/dog_names.txt").exit(1)
 
 @check50.check(compiles)
 def test1():
     """checks for Molly"""
-    check50.run("./trie dog_names.txt").stdin("Molly").stdout("Found!").exit()
+    check50.run("./trie names/dog_names.txt").stdin("Molly").stdout("Found!").exit()
 
 @check50.check(compiles)
 def test2():
     """checks for Lucy"""
-    check50.run("./trie dog_names.txt").stdin("Lucy").stdout("Found!").exit()
+    check50.run("./trie names/dog_names.txt").stdin("Lucy").stdout("Found!").exit()
 
 @check50.check(compiles)
 def test3():
     """checks for Prudence"""
-    check50.run("./trie dog_names.txt").stdin("Prudence").stdout("Not Found.").exit()
+    check50.run("./trie names/dog_names.txt").stdin("Prudence").stdout("Not Found.").exit()
 
 @check50.check(compiles)
 def test4():
     """checks for mOLLy (ignores case)"""
-    check50.run("./trie dog_names.txt").stdin("mOLLy").stdout("Found!").exit()
+    check50.run("./trie names/dog_names.txt").stdin("mOLLy").stdout("Found!").exit()
 
 # names from https://www.ssa.gov/oact/babynames/decades/century.html
 @check50.check(compiles)
 def test5():
     """checks for other names (Found)"""
-    check50.run("./trie other_names.txt").stdin("JENNIFER").stdout("Found!").exit()
+    check50.run("./trie names/other_names.txt").stdin("JENNIFER").stdout("Found!").exit()
 
 @check50.check(compiles)
 def test6():
     """checks for other names (Not Found)"""
-    check50.run("./trie other_names.txt").stdin("Jenni").stdout("Not Found.").exit()
+    check50.run("./trie names/other_names.txt").stdin("Jenni").stdout("Not Found.").exit()
 

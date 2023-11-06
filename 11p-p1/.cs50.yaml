@@ -1,8 +1,9 @@
 check50:
   files: &check50_files
+    - !exclude "*"
+    - !require test.c
     - !include *.py
     - !include *.csv
 
 submit50:
   files: *check50_files
-  style: false

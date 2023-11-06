@@ -1,8 +1,11 @@
-check50:
-  files: &check50_files
+lab50:
+  files: &lab50_files
     - !include *.py
     - !include *.csv
 
 submit50:
-  files: *check50_files
+  files: *lab50_files
   style: false
+
+check50:
+  files: *lab50_files

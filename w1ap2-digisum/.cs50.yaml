@@ -1,7 +1,0 @@
-check50:
-  files: &check50_files
-    - !exclude "*"
-    - !require w1ap2-digisum.c
-
-submit50:
-  files: *check50_files

@@ -1,4 +1,0 @@
-submit50:
-  files: &check50_files
-    - !include *.py
-    - !include *.csv

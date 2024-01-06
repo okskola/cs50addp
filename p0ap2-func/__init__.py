@@ -2,10 +2,12 @@ import check50
 
 @check50.check()
 def exists():
-    """p0ap2-func.py exists"""
+    """p0ap2func.py exists"""
     check50.exists("p0ap2-func.py")
     check50.include("testswap.py")
     check50.include("testctof.py")
+    check50.include("testhex.py")
+    check50.include("testleap.py")
 
 @check50.check(exists)
 def test1():

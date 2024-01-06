@@ -1,4 +1,4 @@
-from p0ap2func import swap
+from p0ap1func import swap
 
 a = input()
 b = input()

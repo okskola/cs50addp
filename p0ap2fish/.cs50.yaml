@@ -1,7 +1,7 @@
 check50:
   files: &check50_files
     - !exclude "*"
-    - !require p0ap1-fish.py
+    - !require p0ap2fish.py
 
 submit50:
   files: *check50_files

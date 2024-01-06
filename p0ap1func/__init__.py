@@ -12,7 +12,7 @@ def exists():
 @check50.check(exists)
 def test1():
     """checks swap(3,4)"""
-    check50.run("python3 testswap.py").stdin("3").stdin("4").stdout("4,3").exit()
+    check50.run("python3 testswap.py").stdin("3", prompt=True).stdin("4", prompt=True).stdout("4,3").exit()
 
 @check50.check(exists)
 def test2():

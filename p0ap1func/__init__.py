@@ -3,7 +3,7 @@ import check50
 @check50.check()
 def exists():
     """p0ap1func.py exists"""
-    check50.exists("p0ap2-func.py")
+    check50.exists("p0ap1func.py")
     check50.include("testswap.py")
     check50.include("testctof.py")
     check50.include("testhex.py")

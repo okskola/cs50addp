@@ -37,12 +37,12 @@ def test5():
 @check50.check(exists)
 def test6():
     """checks hex_area(3)"""
-    check50.run("python3 testhex.py 3").stdout("7.79").exit()
+    check50.run("python3 testhex.py 3").stdout("23.38").exit()
 
 @check50.check(exists)
 def test7():
     """checks hex_area(10)"""
-    check50.run("python3 testhex.py 10").stdout("25.98").exit()
+    check50.run("python3 testhex.py 10").stdout("259.81").exit()
 
 @check50.check(exists)
 def test8():

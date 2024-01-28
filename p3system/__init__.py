@@ -28,15 +28,15 @@ def test4():
 
 def test5():
     """checks ax+y=1, x+y=1 """
-    check50.run("python3 p3system.py").stdin("a").stdin("1").stdin("1").stdin("1").stdin("1").stdin("1").stdout("xCannot solve").exit()
+    check50.run("python3 p3system.py").stdin("a").stdin("1").stdin("1").stdin("1").stdin("1").stdin("1").stdout("Cannot solve").exit()
 
 @check50.check(exists)
 def test6():
     """checks x+y=1, x+y=c """
-    check50.run("python3 p3system.py").stdin("1").stdin("1").stdin("1").stdin("1").stdin("1").stdin("c").stdout("xCannot solve").exit()
+    check50.run("python3 p3system.py").stdin("1").stdin("1").stdin("1").stdin("1").stdin("1").stdin("c").stdout("Cannot solve").exit()
 
 @check50.check(exists)
 def test7():
     """checks x+y=5, x+y=7 """
-    check50.run("python3 p3system.py").stdin("1").stdin("1").stdin("5").stdin("1").stdin("1").stdin("7").stdout("xCannot solve").exit()
+    check50.run("python3 p3system.py").stdin("1").stdin("1").stdin("5").stdin("1").stdin("1").stdin("7").stdout("Cannot solve").exit()
 

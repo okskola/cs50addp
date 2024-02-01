@@ -1,7 +1,5 @@
-check50:
-  files: &check50_files
-    - !include "*.py"
+import check50
 
-submit50:
-  files: *check50_files
-  style: false
+@check50.check()
+def submitted():
+    """Submitted"""

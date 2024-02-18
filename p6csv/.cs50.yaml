@@ -2,7 +2,7 @@ check50:
   files: &check50_files
     - !exclude "*"
     - !require "p6csv.py"
-    - !require "out.csv"
+    - !require "minmax.csv"
 
 submit50:
   files: *check50_files

@@ -1,8 +1,8 @@
 check50:
   files: &check50_files
     - !exclude "*"
-    - !include "*.py"
-    - !include "out.csv"
+    - !require "p6csv.py"
+    - !require "out.csv"
 
 submit50:
   files: *check50_files

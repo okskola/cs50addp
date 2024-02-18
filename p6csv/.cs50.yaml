@@ -1,0 +1,8 @@
+check50:
+  files: &check50_files
+    - !include "*.py"
+    - !include "out.csv"
+
+submit50:
+  files: *check50_files
+  style: false

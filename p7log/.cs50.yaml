@@ -2,6 +2,8 @@ check50:
   files: &check50_files
     - !exclude "*"
     - !require "p7log.py"
+    - !include "out.log"
+    - !include "emails.txt"
 
 submit50:
   files: *check50_files

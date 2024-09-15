@@ -8,5 +8,5 @@ def exists():
 @check50.check(exists)
 def test1():
     """checks integer """
-    check50.run("python3 p2digitnum.py").stdin("-40").stdin("32").stdin("68").stdin("98").stdin("212").stdout("212.0ºF = 100.0ºC").exit()
+    check50.run("python3 p2ftoc.py").stdin("-40").stdin("32").stdin("68").stdin("98").stdin("212").stdout("212.0ºF = 100.0ºC").exit()
 

@@ -1,7 +1,7 @@
 check50:
   files: &check50_files
     - !exclude "*"
-    - !require "extracthtml.py"
+    - !require "p10extracthtml.py"
 
 
 submit50:

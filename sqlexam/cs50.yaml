@@ -1,7 +1,7 @@
 check50:
   files: &check50_files
-    - !include "*.py"
-    - !include "*.csv"
+    - !include "*.db"
+    - !include "*.sql"
 
 submit50:
   files: *check50_files

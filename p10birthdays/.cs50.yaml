@@ -1,9 +1,0 @@
-check50:
-  files: &check50_files
-    - !exclude "*"
-    - !require "p10birthdays.py"
-
-
-submit50:
-  files: *check50_files
-  style: false

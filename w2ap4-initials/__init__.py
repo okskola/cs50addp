@@ -14,17 +14,22 @@ def compiles():
     check50.c.compile("initials.c", lcs50=True)
 
 @check50.check(compiles)
-def test_abc():
+def test_1():
     """tests Isabella Moreno"""
     check50.run("./initials").stdin("Isabella Moreno").stdout("IM").exit()
 
 @check50.check(compiles)
-def test_abbbbcw():
+def test_2():
     """tests Liam Alexander Cruz"""
     check50.run("./initials").stdin("Liam Alexander Cruz").stdout("LAC").exit()
 
 @check50.check(compiles)
-def test_abbcbb():
+def test_3():
     """tests Sophia Jean Maria Lawson"""
     check50.run("./initials").stdin("Sophia Jean Maria Lawson").stdout("SJML").exit()
+
+@check50.check(compiles)
+def test_uppercase():
+    """tests ISABELLA MORENO"""
+    check50.run("./initials").stdin("ISABELLA MORENO").stdout("IM").exit()
 

@@ -1,5 +1,6 @@
 import check50
 import check50.c
+from re import escape
 
 @check50.check()
 def exists():
@@ -32,4 +33,3 @@ def test3():
 def regex(amount):
     """match amount, allowing for characters (not numbers) on either side"""
     return fr'^([^\d](?<!\$None)(?<!\$nan))*{escape(amount)}([^\d](?<!\$None)(?<!\$nan))*$'
-    

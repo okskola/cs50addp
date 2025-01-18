@@ -14,7 +14,7 @@ def compiles():
 @check50.check(compiles)
 def test1():
     """checks for Burger"""
-    check50.run("./snackbar").stdin("Burger").stdin("").stdout(".*$9.50.*", regex=True).exit()
+    check50.run("./snackbar").stdin("Burger").stdin("").stdout("\$9.50", timeout=5).exit()
 
 #@check50.check(compiles)
 #def test2():

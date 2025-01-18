@@ -16,12 +16,12 @@ def test1():
     """checks for Burger"""
     check50.run("./snackbar").stdin("Burger").stdin("").stdout("\$9.50", timeout=5).exit()
 
-#@check50.check(compiles)
-#def test2():
-#    """checks for burger, Vegan Burger"""
-#    check50.run("./snackbar").stdin("burger").stdin("Vegan Burger").stdin("").stdout("$20.50").exit()
-#
-#@check50.check(compiles)
-#def test3():
-#    """checks for Cheese Dog, dog, cheese, hot DOG"""
-#    check50.run("./snackbar").stdin("Cheese Dog").stdin("dog").stdin("cheese").stdin("hot DOG").stdin("").stdout("$8.00").exit()
+@check50.check(compiles)
+def test2():
+    """checks for burger, Vegan Burger"""
+    check50.run("./snackbar").stdin("burger").stdin("Vegan Burger").stdin("").stdout("\$20.50", timeout=5).exit()
+
+@check50.check(compiles)
+def test3():
+    """checks for Cheese Dog, dog, cheese, hot DOG"""
+    check50.run("./snackbar").stdin("Cheese Dog").stdin("dog").stdin("cheese").stdin("hot DOG").stdin("").stdout("\$8.00", timeout=5).exit()

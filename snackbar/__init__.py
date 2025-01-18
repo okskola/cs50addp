@@ -27,7 +27,7 @@ def test2():
 @check50.check(compiles)
 def test3():
     """checks for Cheese Dog, dog, cheese, hot DOG"""
-    output = "$8.00"
+    output = "$12.00"
     check50.run("./snackbar").stdin("Cheese Dog").stdin("dog").stdin("cheese").stdin("hot DOG").stdin("").stdout(regex(output), output, regex=True, timeout=5).exit()
 
 def regex(amount):

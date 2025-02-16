@@ -1,0 +1,9 @@
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !include "median.c"
+    - !include "digsum.c"
+
+submit50:
+  files: *check50_files
+  style: false

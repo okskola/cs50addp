@@ -1,7 +1,7 @@
 check50:
   files: &check50_files
     - !exclude "*"
-    - !require favorites.sql
+    - !require index.html
 
 submit50:
   files: *check50_files

@@ -1,8 +1,7 @@
 check50:
   files: &check50_files
     - !include "*.htm*"
-    - !include "*.png"
-    - !include "*.jpg"
+
 
 submit50:
   files: *check50_files

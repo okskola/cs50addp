@@ -1,6 +1,7 @@
 check50:
   files: &check50_files
-    - !require *
+    - !exclude "*"
+    - !include "radiotoday/*"
 
 submit50:
   files: *check50_files

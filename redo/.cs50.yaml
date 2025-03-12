@@ -1,10 +1,7 @@
-check50:
+check50: 
   files: &check50_files
-    - !exclude "*"
-    - !include *.html
-    - !include *.htm
-    - !include *.png
-    - !include *.jpg
+    - !require index.html
 
-submit50:
+submit50: 
   files: *check50_files
+  style: false

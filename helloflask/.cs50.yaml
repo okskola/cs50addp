@@ -1,0 +1,11 @@
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require app.py
+    - !require templates/index.html
+    - !require templates/layout.html
+    - !require templates/color.html
+  style: false
+
+submit50:
+  files: *check50_files

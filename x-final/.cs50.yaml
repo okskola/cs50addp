@@ -1,0 +1,8 @@
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !include "x_final.c"
+
+submit50:
+  files: *check50_files
+  style: false

@@ -6,37 +6,71 @@ def exists():
     check50.exists("p1kval.py")
 
 
-@check50.check(exists)
-def test_invalid():
-    """checks negative value"""
-    check50.run("python3 p1kval.py").stdin("4").stdin("-1").stdin("160").stdout("Nederīgi dati").exit()
-
+# Katrs negatīvās vērtības OR zars
 
 @check50.check(exists)
-def test_strength():
-    """checks suitable sample based on strength"""
-    check50.run("python3 p1kval.py").stdin("4").stdin("300").stdin("100").stdout("Atbilstošs").exit()
+def negative_porosity():
+    """checks negative porosity"""
+    check50.run("python3 p1kval.py").stdin("-1").stdin("300").stdin("150").stdout("Nederīgi dati").exit()
 
 
 @check50.check(exists)
-def test_hardness():
-    """checks suitable sample based on hardness"""
-    check50.run("python3 p1kval.py").stdin("5").stdin("250").stdin("150").stdout("Atbilstošs").exit()
+def negative_strength():
+    """checks negative strength"""
+    check50.run("python3 p1kval.py").stdin("5").stdin("-1").stdin("150").stdout("Nederīgi dati").exit()
 
 
 @check50.check(exists)
-def test_high_porosity():
-    """checks sample with excessive porosity"""
-    check50.run("python3 p1kval.py").stdin("5.1").stdin("400").stdin("200").stdout("Neatbilstošs").exit()
+def negative_hardness():
+    """checks negative hardness"""
+    check50.run("python3 p1kval.py").stdin("5").stdin("300").stdin("-1").stdout("Nederīgi dati").exit()
+
+
+# Atbilstošs ar katru iekšējā OR zaru
+
+@check50.check(exists)
+def strength_boundary():
+    """checks strength boundary"""
+    check50.run("python3 p1kval.py").stdin("5").stdin("300").stdin("149").stdout("Atbilstošs").exit()
 
 
 @check50.check(exists)
-def test_low_properties():
-    """checks sample with insufficient strength and hardness"""
-    check50.run("python3 p1kval.py").stdin("3").stdin("299").stdin("149").stdout("Neatbilstošs").exit()
+def hardness_boundary():
+    """checks hardness boundary"""
+    check50.run("python3 p1kval.py").stdin("5").stdin("299").stdin("150").stdout("Atbilstošs").exit()
 
 
 @check50.check(exists)
-def test_zero():
-    """checks zero values are not treated as negative"""
+def both_properties():
+    """checks both strength and hardness conditions"""
+    check50.run("python3 p1kval.py").stdin("5").stdin("300").stdin("150").stdout("Atbilstošs").exit()
+
+
+# AND nosacījuma pārbaude
+
+@check50.check(exists)
+def excessive_porosity_strength():
+    """checks high porosity despite sufficient strength"""
+    check50.run("python3 p1kval.py").stdin("5.1").stdin("300").stdin("149").stdout("Neatbilstošs").exit()
+
+
+@check50.check(exists)
+def excessive_porosity_hardness():
+    """checks high porosity despite sufficient hardness"""
+    check50.run("python3 p1kval.py").stdin("5.1").stdin("299").stdin("150").stdout("Neatbilstošs").exit()
+
+
+# Vērtības tieši zem robežām
+
+@check50.check(exists)
+def below_property_boundaries():
+    """checks values below strength and hardness boundaries"""
+    check50.run("python3 p1kval.py").stdin("5").stdin("299.9").stdin("149.9").stdout("Neatbilstošs").exit()
+
+
+# Nulle nav negatīva vērtība
+
+@check50.check(exists)
+def zero_values():
+    """checks zero values"""
     check50.run("python3 p1kval.py").stdin("0").stdin("0").stdin("0").stdout("Neatbilstošs").exit()

@@ -1,7 +1,7 @@
 check50:
   files: &check50_files
     - !exclude "*"
-    - !require p10-2-skidr.py
+    - !require p10-2-skid.py
 
 submit50:
   files: *check50_files

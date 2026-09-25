@@ -52,8 +52,7 @@ def several_elements():
 @check50.check(exists)
 def unknown_element():
     """Pārbauda nezināmu elementu"""
-    check50.run("python3 p10-2-mol.py").stdin("X").stdin("2").stdin("H").stdin("2").stdin("O").stdin("1").stdin("").stdout("Nezināms elements").stdout("Molmasa: 18 g/mol").exit()
-
+    check50.run("python3 p10-2-mol.py").stdin("X").stdout("Nezināms elements").stdin("H").stdin("2").stdin("O").stdin("1").stdin("").stdout("Molmasa: 18 g/mol").exit()
 
 # Tukša virkne uzreiz
 

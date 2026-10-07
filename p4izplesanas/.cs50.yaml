@@ -1,0 +1,7 @@
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require p4izplesanas.py
+
+submit50:
+  files: *check50_files

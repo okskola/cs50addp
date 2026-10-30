@@ -1,4 +1,5 @@
 """check50 pārbaudes uzdevumam p6struktura.py."""
+# Veidots ar  ChatGPT
 from pathlib import Path
 import check50
 import re

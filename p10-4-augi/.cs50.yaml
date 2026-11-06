@@ -1,0 +1,7 @@
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require p10-4-augi.py
+
+submit50:
+  files: *check50_files

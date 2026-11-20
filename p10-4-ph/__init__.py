@@ -23,6 +23,7 @@ def exists():
 @check50.check(exists)
 def example():
     """Pārbauda pirmo JSON datni un uzdevuma piemēru"""
+    check50.include("p10-4-ph1.json")
     _parbaudit("p10-4-ph1.json", [
         "Citronu sula: skābs",
         "Tīrs ūdens: neitrāls",
@@ -37,6 +38,7 @@ def example():
 @check50.check(exists)
 def second_file():
     """Pārbauda otro JSON datni: vairāk šķīdumu un pH robežvērtības"""
+    check50.include("p10-4-ph2.json")
     _parbaudit("p10-4-ph2.json", [
         "Kuņģa sula: skābs",
         "Etiķis: skābs",
@@ -53,7 +55,6 @@ def second_file():
         "Neitrāli šķīdumi: 2",
         "Bāziski šķīdumi: 4",
     ])
-
 
 @check50.check(exists)
 def boundary_values():
